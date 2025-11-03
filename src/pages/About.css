@@ -1,0 +1,67 @@
+.about-page {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(8px); /* ✅ blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Dark transparent layer over background */
+.about-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+/* White content box */
+.about-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-content h1,
+.about-content h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+
+
+/* Small Highlight Color */
+.highlight {
+  color: #0077cc;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 20px;
+  }
+
+  .about-card h1 {
+    font-size: 2rem;
+  }
+
+  .about-card h3 {
+    font-size: 1.3rem;
+  }
+}

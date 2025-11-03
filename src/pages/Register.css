@@ -1,0 +1,99 @@
+/* Full page background setup */
+.page.about-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Background blur + dark overlay for clarity */
+.page.about-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Main form card */
+.register-page .card.form {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 30px;
+  border-radius: 12px;
+  width: 430px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.register-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 26px;
+}
+
+/* Inputs + Select */
+.register-page input,
+.register-page select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.register-page input:focus,
+.register-page select:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 4px rgba(0, 119, 255, 0.3);
+}
+
+/* Button */
+.register-page .btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-page .btn:hover {
+  background-color: #005ad1;
+}
+
+/* Success/Error messages */
+.success {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.error {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 6px;
+  font-size: 14px;
+}

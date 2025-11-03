@@ -1,0 +1,10 @@
+/* AdminDashboard.css (merge into App.css if you prefer) */
+.post-form{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.post-form input, .post-form textarea{padding:8px;border-radius:8px;border:1px solid #ddd}
+.posts .post-item{border:1px solid #eee;padding:10px;border-radius:8px;margin-bottom:8px;background:#fafafa}
+.campaign-row{display:flex;gap:12px;overflow:auto;padding:8px 0}
+.campaign-card{min-width:220px;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 4px 8px rgba(0,0,0,0.03)}
+.campaign-img{height:140px;background-size:cover;background-position:center}
+.campaign-meta{padding:8px;display:flex;justify-content:space-between}
+.member-card{display:flex;flex-direction:column;align-items:center;padding:8px}
+.member-card .avatar{width:80px;height:80px;border-radius:999px;object-fit:cover}

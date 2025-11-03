@@ -1,0 +1,97 @@
+/* Full background setup */
+.page.about-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Blur + dark overlay for readability */
+.page.about-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Login card container */
+.login-page .card.form {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 30px;
+  border-radius: 12px;
+  width: 420px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.login-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #222;
+}
+
+/* Inputs */
+.login-page input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-page input:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 4px rgba(0, 119, 255, 0.3);
+}
+
+/* Buttons */
+.login-page .btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.login-page .btn:hover {
+  background-color: #005ad1;
+}
+
+.login-page .btn.outline {
+  background: transparent;
+  border: 1px solid #0077ff;
+  color: #0077ff;
+}
+
+.login-page .btn.outline:hover {
+  background: #0077ff;
+  color: white;
+}
+
+/* Error message */
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 8px 0;
+}

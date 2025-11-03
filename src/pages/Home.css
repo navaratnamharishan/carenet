@@ -1,0 +1,156 @@
+/* Home.css */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 0 12px;
+}
+
+.hero-overlay h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-actions .btn {
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-actions .btn.outline {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { height: 50vh; }
+  .hero-overlay h1 { font-size: 2rem; }
+  .hero-overlay p { font-size: 1rem; }
+}
+
+/* NOTIFICATIONS, CAMPAIGNS & TEAM CARDS */
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(14,30,37,0.06);
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note-list li {
+  margin-bottom: 12px;
+}
+
+.campaign-row, .team-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.campaign-card, .member-card {
+  flex: 1 1 200px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.campaign-img {
+  width: 100%;
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+}
+
+.campaign-meta {
+  padding: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.campaign-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.campaign-card:hover .campaign-hover {
+  opacity: 1;
+}
+
+.avatar {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.member-name {
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.member-role {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-carousel { height: 50vh; }
+  .hero-overlay h1 { font-size: 2rem; }
+  .hero-overlay p { font-size: 1rem; }
+  
+  .campaign-row, .team-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .carousel-wrapper { animation-duration: 30s; } /* slower on mobile */
+}
